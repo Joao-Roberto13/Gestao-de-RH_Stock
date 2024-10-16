@@ -1,0 +1,50 @@
+Lety, Suprimentos e Compras, Gerente de Suprimentos, DSC
+Mava, Organiza a movimentacao de mercadorias, Supervisora de Armazem, Logistica
+Joao Roberto, Linha de Producao, Engenheiro de Producao, Producao
+Carlos, Finanças, Diretor Financeiro, Departamento Financeiro
+Sara, Vendas, Gerente de Vendas, Comercial
+Pedro, TI, Analista de Sistemas, Tecnologia da Informacao
+Ana, RH, Coordenadora de Recursos Humanos, Recursos Humanos
+Lucas, Compras, Assistente de Compras, Suprimentos
+Paula, Marketing, Especialista de Marketing Digital, Comunicacao
+Miguel, Producao, Supervisor de Producao, Producao
+Marcos, Logistica, Coordenador de Logistica, Logistica
+Camila, Vendas, Consultora de Vendas, Comercial
+Felipe, TI, Desenvolvedor de Software, Tecnologia da Informacao
+Larissa, RH, Assistente de RH, Recursos Humanos
+Rodrigo, Suprimentos, Analista de Suprimentos, Suprimentos
+Fernanda, Financas, Assistente Financeira, Departamento Financeiro
+Thiago, Marketing, Designer Gráfico, Comunicacao
+Beatriz, Produção, Operadora de Maquinas, Producao
+Renato, Logistica, Motorista de Transporte, Logistica
+Carla, Compras, Coordenadora de Compras, Suprimentos
+Bruno, Vendas, Assistente de Vendas, Comercial
+Clara, TI, Administradora de Redes, Tecnologia da Informacao
+Diego, RH, Gerente de Recursos Humanos, Recursos Humanos
+Rafaela, Suprimentos, Coordenadora de Estoque, Suprimentos
+Juliana, Marketing, Analista de Mídias Sociais, Comunicação
+Leonardo, Produção, Técnico de Manutenção, Produção
+Sophia, Finanças, Analista de Controle Financeiro, Departamento Financeiro
+Vitor, Compras, Assistente Administrativo, Suprimentos
+Mariana, Logística, Planejadora de Rotas, Logística
+Ricardo, TI, Suporte Técnico, Tecnologia da Informação
+Vanessa, Vendas, Consultora de Produtos, Comercial
+André, RH, Especialista de Treinamento, Recursos Humanos
+Patrícia, Marketing, Coordenadora de Projetos, Comunicação
+Gustavo, Produção, Operador de Empilhadeira, Produção
+Fernanda, Finanças, Controladora de Gastos, Departamento Financeiro
+Eduardo, Compras, Gerente de Compras, Suprimentos
+Isabel, TI, Desenvolvedora Front-end, Tecnologia da Informação
+Ronaldo, Logística, Supervisor de Transporte, Logística
+Gabriela, Marketing, Redatora Publicitária, Comunicação
+Hugo, Produção, Líder de Equipe, Produção
+Lúcia, Vendas, Supervisora de Atendimento ao Cliente, Comercial
+Daniel, TI, Analista de Banco de Dados, Tecnologia da Informação
+Tatiana, RH, Assistente de Departamento Pessoal, Recursos Humanos
+Henrique, Suprimentos, Supervisor de Aquisição, Suprimentos
+Priscila, Finanças, Coordenadora de Orçamento, Departamento Financeiro
+Maurício, Produção, Coordenador de Linha de Produção, Produção
+Cíntia, Logística, Assistente de Logística, Logística
+Roberta, Compras, Analista de Custos, Suprimentos
+Alex, Marketing, Gerente de Campanhas, Comunicação
+Flávio, TI, Engenheiro de Software, Tecnologia da Informação
