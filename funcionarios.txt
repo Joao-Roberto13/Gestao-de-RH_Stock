@@ -1,50 +1,51 @@
-Lety, Suprimentos e Compras, Gerente de Suprimentos, DSC, 12000
-Mava, Organiza a movimentacao de mercadorias, Supervisora de Armazem, Logistica, 8500
-Joao Roberto, Linha de Producao, Engenheiro de Producao, Producao, 10000
-Carlos, Financas, Diretor Financeiro, Departamento Financeiro, 15000
-Sara, Vendas, Gerente de Vendas, Comercial, 11000
-Pedro, TI, Analista de Sistemas, Tecnologia da Informacao, 7500
-Ana, RH, Coordenadora de Recursos Humanos, Recursos Humanos, 9000
-Lucas, Compras, Assistente de Compras, Suprimentos, 5500
-Paula, Marketing, Especialista de Marketing Digital, Comunicacao, 6500
-Miguel, Producao, Supervisor de Producao, Producao, 9500
-Marcos, Logistica, Coordenador de Logistica, Logistica, 10000
-Camila, Vendas, Consultora de Vendas, Comercial, 5800
-Felipe, TI, Desenvolvedor de Software, Tecnologia da Informacao, 8000
-Larissa, RH, Assistente de RH, Recursos Humanos, 4800
-Rodrigo, Suprimentos, Analista de Suprimentos, Suprimentos, 7200
-Fernanda, Financas, Assistente Financeira, Departamento Financeiro, 5200
-Thiago, Marketing, Designer Grafico, Comunicacao, 6000
-Beatriz, Producao, Operadora de Maquinas, Producao, 4500
-Renato, Logistica, Motorista de Transporte, Logistica, 5300
-Carla, Compras, Coordenadora de Compras, Suprimentos, 9000
-Bruno, Vendas, Assistente de Vendas, Comercial, 4700
-Clara, TI, Administradora de Redes, Tecnologia da Informacao, 7800
-Diego, RH, Gerente de Recursos Humanos, Recursos Humanos, 11000
-Rafaela, Suprimentos, Coordenadora de Estoque, Suprimentos, 8200
-Juliana, Marketing, Analista de Midias Sociais, Comunicacao, 5600
-Leonardo, Producao, Tecnico de Manutencao, Producao, 6500
-Sophia, Financas, Analista de Controle Financeiro, Departamento Financeiro, 7700
-Vitor, Compras, Assistente Administrativo, Suprimentos, 4500
-Mariana, Logistica, Planejadora de Rotas, Logistica, 8800
-Ricardo, TI, Suporte Tecnico, Tecnologia da Informacao, 6200
-Vanessa, Vendas, Consultora de Produtos, Comercial, 5900
-Andre, RH, Especialista de Treinamento, Recursos Humanos, 7000
-Patricia, Marketing, Coordenadora de Projetos, Comunicacao, 8400
-Gustavo, Producao, Operador de Empilhadeira, Producao, 5000
-Fernanda, Financas, Controladora de Gastos, Departamento Financeiro, 8500
-Eduardo, Compras, Gerente de Compras, Suprimentos, 12000
-Isabel, TI, Desenvolvedora Front-end, Tecnologia da Informacao, 8300
-Ronaldo, Logistica, Supervisor de Transporte, Logistica, 7500
-Gabriela, Marketing, Redatora Publicitaria, Comunicacao, 6300
-Hugo, Producao, Lider de Equipe, Producao, 9500
-Lucia, Vendas, Supervisora de Atendimento ao Cliente, Comercial, 8700
-Daniel, TI, Analista de Banco de Dados, Tecnologia da Informacao, 8600
-Tatiana, RH, Assistente de Departamento Pessoal, Recursos Humanos, 4900
-Henrique, Suprimentos, Supervisor de Aquizacao, Suprimentos, 9800
-Priscila, Financas, Coordenadora de Orcamento, Departamento Financeiro, 8200
-Mauricio, Producao, Coordenador de Linha de Producao, Producao, 10500
-Cintia, Logistica, Assistente de Logistica, Logistica, 5400
-Roberta, Compras, Analista de Custos, Suprimentos, 6800
-Alex, Marketing, Gerente de Campanhas, Comunicacao, 11200
-Flavio, TI, Engenheiro de Software, Tecnologia da Informacao, 9200
+Lety, Suprimentos e Compras, Gerente de Suprimentos, 12000, 12000
+Mava, Organiza a movimentacao de mercadorias, Supervisora de Armazem, 8500, 8500
+Joao Roberto, Linha de Producao, Engenheiro de Producao, 10000, 10000
+Carlos, Financas, Diretor Financeiro, 15000, 15000
+Sara, Vendas, Gerente de Vendas, 11000, 11000
+Pedro, TI, Analista de Sistemas, 7500, 7500
+Ana, RH, Coordenadora de Recursos Humanos, 9000, 9000
+Lucas, Compras, Assistente de Compras, 5500, 5500
+Paula, Marketing, Especialista de Marketing Digital, 6500, 6500
+Miguel, Producao, Supervisor de Producao, 9500, 9500
+Marcos, Logistica, Coordenador de Logistica, 10000, 10000
+Camila, Vendas, Consultora de Vendas, 5800, 5800
+Felipe, TI, Desenvolvedor de Software, 8000, 8000
+Larissa, RH, Assistente de RH, 4800, 4800
+Rodrigo, Suprimentos, Analista de Suprimentos, 7200, 7200
+Fernanda, Financas, Assistente Financeira, 5200, 5200
+Thiago, Marketing, Designer Grafico, 6000, 6000
+Beatriz, Producao, Operadora de Maquinas, 4500, 4500
+Renato, Logistica, Motorista de Transporte, 5300, 5300
+Carla, Compras, Coordenadora de Compras, 9000, 9000
+Bruno, Vendas, Assistente de Vendas, 4700, 4700
+Clara, TI, Administradora de Redes, 7800, 7800
+Diego, RH, Gerente de Recursos Humanos, 11000, 11000
+Rafaela, Suprimentos, Coordenadora de Estoque, 8200, 8200
+Juliana, Marketing, Analista de Midias Sociais, 5600, 5600
+Leonardo, Producao, Tecnico de Manutencao, 6500, 6500
+Sophia, Financas, Analista de Controle Financeiro, 7700, 7700
+Vitor, Compras, Assistente Administrativo, 4500, 4500
+Mariana, Logistica, Planejadora de Rotas, 8800, 8800
+Ricardo, TI, Suporte Tecnico, 6200, 6200
+Vanessa, Vendas, Consultora de Produtos, 5900, 5900
+Andre, RH, Especialista de Treinamento, 7000, 7000
+Patricia, Marketing, Coordenadora de Projetos, 8400, 8400
+Gustavo, Producao, Operador de Empilhadeira, 5000, 5000
+Fernanda, Financas, Controladora de Gastos, 8500, 8500
+Eduardo, Compras, Gerente de Compras, 12000, 12000
+Isabel, TI, Desenvolvedora Front-end, 8300, 8300
+Ronaldo, Logistica, Supervisor de Transporte, 7500, 7500
+Gabriela, Marketing, Redatora Publicitaria, 6300, 6300
+Hugo, Producao, Lider de Equipe, 9500, 9500
+Lucia, Vendas, Supervisora de Atendimento ao Cliente, 8700, 8700
+Daniel, TI, Analista de Banco de Dados, 8600, 8600
+Tatiana, RH, Assistente de Departamento Pessoal, 4900, 4900
+Henrique, Suprimentos, Supervisor de Aquizacao, 9800, 9800
+Priscila, Financas, Coordenadora de Orcamento, 8200, 8200
+Mauricio, Producao, Coordenador de Linha de Producao, 10500, 10500
+Cintia, Logistica, Assistente de Logistica, 5400, 5400
+Roberta, Compras, Analista de Custos, 6800, 6800
+Alex, Marketing, Gerente de Campanhas, 11200, 11200
+Flavio, TI, Engenheiro de Software, 9200, 9200
+Messi,Linha de Produção,Supervisor,Produção,10000000

@@ -50,7 +50,7 @@ def salvar_dadosRH():
             area_trabalho = screen_RH.tableWidget.item(row, 1).text()
             cargo = screen_RH.tableWidget.item(row, 2).text()
             departamento = screen_RH.tableWidget.item(row, 3).text()
-            salario = departamento = screen_RH.tableWidget.item(row, 4).text()
+            salario = screen_RH.tableWidget.item(row, 4).text()
             file.write(f"{nome},{area_trabalho},{cargo},{departamento},{salario}\n")
 
 def registrar_funcionario():
@@ -69,7 +69,7 @@ def registrar_funcionario():
         screen_RH.tableWidget.setItem(rowPosition, 1, QtWidgets.QTableWidgetItem(area_trabalho))
         screen_RH.tableWidget.setItem(rowPosition, 2, QtWidgets.QTableWidgetItem(cargo))
         screen_RH.tableWidget.setItem(rowPosition, 3, QtWidgets.QTableWidgetItem(departamento))
-        screen_RH.tableWidget.setItem(rowPosition, 3, QtWidgets.QTableWidgetItem(salario))
+        screen_RH.tableWidget.setItem(rowPosition, 4, QtWidgets.QTableWidgetItem(salario))
 
         # Limpar campos de texto
         screen_RH.lineEdit_2.clear()
