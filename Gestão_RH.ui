@@ -182,7 +182,7 @@ background-color: rgb(229, 229, 229);
     <property name="geometry">
      <rect>
       <x>850</x>
-      <y>272</y>
+      <y>250</y>
       <width>305</width>
       <height>35</height>
      </rect>
@@ -218,7 +218,7 @@ background-color: rgb(229, 229, 229);
     <property name="geometry">
      <rect>
       <x>850</x>
-      <y>312</y>
+      <y>290</y>
       <width>305</width>
       <height>35</height>
      </rect>
@@ -261,7 +261,7 @@ background-color: rgb(229, 229, 229);
     <property name="geometry">
      <rect>
       <x>850</x>
-      <y>190</y>
+      <y>168</y>
       <width>305</width>
       <height>35</height>
      </rect>
@@ -297,7 +297,7 @@ background-color: rgb(229, 229, 229);
     <property name="geometry">
      <rect>
       <x>850</x>
-      <y>230</y>
+      <y>208</y>
       <width>305</width>
       <height>35</height>
      </rect>
@@ -332,9 +332,9 @@ background-color: rgb(229, 229, 229);
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>10</y>
-      <width>781</width>
+      <width>791</width>
       <height>441</height>
      </rect>
     </property>
@@ -342,7 +342,7 @@ background-color: rgb(229, 229, 229);
      <bool>true</bool>
     </property>
     <attribute name="horizontalHeaderDefaultSectionSize">
-     <number>193</number>
+     <number>157</number>
     </attribute>
     <attribute name="verticalHeaderVisible">
      <bool>false</bool>
@@ -367,6 +367,41 @@ background-color: rgb(229, 229, 229);
       <string>Departamento</string>
      </property>
     </column>
+    <column>
+     <property name="text">
+      <string>Salário</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_6">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>330</y>
+      <width>305</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+font-size: 13px;
+text-align: center;
+border-radius: 10px;
+background-color: rgb(229, 229, 229);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string>Salário</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -382,14 +417,14 @@ background-color: rgb(229, 229, 229);
     <property name="title">
      <string>Ficheiro</string>
     </property>
-    <addaction name="actionRecrutamento_Interno"/>
+    <addaction name="actionRelatorio"/>
     <addaction name="actionSair"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
-  <action name="actionRecrutamento_Interno">
+  <action name="actionRelatorio">
    <property name="text">
-    <string>Recrutamento Interno</string>
+    <string>Relatório dos Salário</string>
    </property>
   </action>
   <action name="actionSair">

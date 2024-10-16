@@ -1,50 +1,50 @@
-Lety, Suprimentos e Compras, Gerente de Suprimentos, DSC
-Mava, Organiza a movimentacao de mercadorias, Supervisora de Armazem, Logistica
-Joao Roberto, Linha de Producao, Engenheiro de Producao, Producao
-Carlos, Finanças, Diretor Financeiro, Departamento Financeiro
-Sara, Vendas, Gerente de Vendas, Comercial
-Pedro, TI, Analista de Sistemas, Tecnologia da Informacao
-Ana, RH, Coordenadora de Recursos Humanos, Recursos Humanos
-Lucas, Compras, Assistente de Compras, Suprimentos
-Paula, Marketing, Especialista de Marketing Digital, Comunicacao
-Miguel, Producao, Supervisor de Producao, Producao
-Marcos, Logistica, Coordenador de Logistica, Logistica
-Camila, Vendas, Consultora de Vendas, Comercial
-Felipe, TI, Desenvolvedor de Software, Tecnologia da Informacao
-Larissa, RH, Assistente de RH, Recursos Humanos
-Rodrigo, Suprimentos, Analista de Suprimentos, Suprimentos
-Fernanda, Financas, Assistente Financeira, Departamento Financeiro
-Thiago, Marketing, Designer Gráfico, Comunicacao
-Beatriz, Produção, Operadora de Maquinas, Producao
-Renato, Logistica, Motorista de Transporte, Logistica
-Carla, Compras, Coordenadora de Compras, Suprimentos
-Bruno, Vendas, Assistente de Vendas, Comercial
-Clara, TI, Administradora de Redes, Tecnologia da Informacao
-Diego, RH, Gerente de Recursos Humanos, Recursos Humanos
-Rafaela, Suprimentos, Coordenadora de Estoque, Suprimentos
-Juliana, Marketing, Analista de Mídias Sociais, Comunicação
-Leonardo, Produção, Técnico de Manutenção, Produção
-Sophia, Finanças, Analista de Controle Financeiro, Departamento Financeiro
-Vitor, Compras, Assistente Administrativo, Suprimentos
-Mariana, Logística, Planejadora de Rotas, Logística
-Ricardo, TI, Suporte Técnico, Tecnologia da Informação
-Vanessa, Vendas, Consultora de Produtos, Comercial
-André, RH, Especialista de Treinamento, Recursos Humanos
-Patrícia, Marketing, Coordenadora de Projetos, Comunicação
-Gustavo, Produção, Operador de Empilhadeira, Produção
-Fernanda, Finanças, Controladora de Gastos, Departamento Financeiro
-Eduardo, Compras, Gerente de Compras, Suprimentos
-Isabel, TI, Desenvolvedora Front-end, Tecnologia da Informação
-Ronaldo, Logística, Supervisor de Transporte, Logística
-Gabriela, Marketing, Redatora Publicitária, Comunicação
-Hugo, Produção, Líder de Equipe, Produção
-Lúcia, Vendas, Supervisora de Atendimento ao Cliente, Comercial
-Daniel, TI, Analista de Banco de Dados, Tecnologia da Informação
-Tatiana, RH, Assistente de Departamento Pessoal, Recursos Humanos
-Henrique, Suprimentos, Supervisor de Aquisição, Suprimentos
-Priscila, Finanças, Coordenadora de Orçamento, Departamento Financeiro
-Maurício, Produção, Coordenador de Linha de Produção, Produção
-Cíntia, Logística, Assistente de Logística, Logística
-Roberta, Compras, Analista de Custos, Suprimentos
-Alex, Marketing, Gerente de Campanhas, Comunicação
-Flávio, TI, Engenheiro de Software, Tecnologia da Informação
+Lety, Suprimentos e Compras, Gerente de Suprimentos, DSC, 12000
+Mava, Organiza a movimentacao de mercadorias, Supervisora de Armazem, Logistica, 8500
+Joao Roberto, Linha de Producao, Engenheiro de Producao, Producao, 10000
+Carlos, Financas, Diretor Financeiro, Departamento Financeiro, 15000
+Sara, Vendas, Gerente de Vendas, Comercial, 11000
+Pedro, TI, Analista de Sistemas, Tecnologia da Informacao, 7500
+Ana, RH, Coordenadora de Recursos Humanos, Recursos Humanos, 9000
+Lucas, Compras, Assistente de Compras, Suprimentos, 5500
+Paula, Marketing, Especialista de Marketing Digital, Comunicacao, 6500
+Miguel, Producao, Supervisor de Producao, Producao, 9500
+Marcos, Logistica, Coordenador de Logistica, Logistica, 10000
+Camila, Vendas, Consultora de Vendas, Comercial, 5800
+Felipe, TI, Desenvolvedor de Software, Tecnologia da Informacao, 8000
+Larissa, RH, Assistente de RH, Recursos Humanos, 4800
+Rodrigo, Suprimentos, Analista de Suprimentos, Suprimentos, 7200
+Fernanda, Financas, Assistente Financeira, Departamento Financeiro, 5200
+Thiago, Marketing, Designer Grafico, Comunicacao, 6000
+Beatriz, Producao, Operadora de Maquinas, Producao, 4500
+Renato, Logistica, Motorista de Transporte, Logistica, 5300
+Carla, Compras, Coordenadora de Compras, Suprimentos, 9000
+Bruno, Vendas, Assistente de Vendas, Comercial, 4700
+Clara, TI, Administradora de Redes, Tecnologia da Informacao, 7800
+Diego, RH, Gerente de Recursos Humanos, Recursos Humanos, 11000
+Rafaela, Suprimentos, Coordenadora de Estoque, Suprimentos, 8200
+Juliana, Marketing, Analista de Midias Sociais, Comunicacao, 5600
+Leonardo, Producao, Tecnico de Manutencao, Producao, 6500
+Sophia, Financas, Analista de Controle Financeiro, Departamento Financeiro, 7700
+Vitor, Compras, Assistente Administrativo, Suprimentos, 4500
+Mariana, Logistica, Planejadora de Rotas, Logistica, 8800
+Ricardo, TI, Suporte Tecnico, Tecnologia da Informacao, 6200
+Vanessa, Vendas, Consultora de Produtos, Comercial, 5900
+Andre, RH, Especialista de Treinamento, Recursos Humanos, 7000
+Patricia, Marketing, Coordenadora de Projetos, Comunicacao, 8400
+Gustavo, Producao, Operador de Empilhadeira, Producao, 5000
+Fernanda, Financas, Controladora de Gastos, Departamento Financeiro, 8500
+Eduardo, Compras, Gerente de Compras, Suprimentos, 12000
+Isabel, TI, Desenvolvedora Front-end, Tecnologia da Informacao, 8300
+Ronaldo, Logistica, Supervisor de Transporte, Logistica, 7500
+Gabriela, Marketing, Redatora Publicitaria, Comunicacao, 6300
+Hugo, Producao, Lider de Equipe, Producao, 9500
+Lucia, Vendas, Supervisora de Atendimento ao Cliente, Comercial, 8700
+Daniel, TI, Analista de Banco de Dados, Tecnologia da Informacao, 8600
+Tatiana, RH, Assistente de Departamento Pessoal, Recursos Humanos, 4900
+Henrique, Suprimentos, Supervisor de Aquizacao, Suprimentos, 9800
+Priscila, Financas, Coordenadora de Orcamento, Departamento Financeiro, 8200
+Mauricio, Producao, Coordenador de Linha de Producao, Producao, 10500
+Cintia, Logistica, Assistente de Logistica, Logistica, 5400
+Roberta, Compras, Analista de Custos, Suprimentos, 6800
+Alex, Marketing, Gerente de Campanhas, Comunicacao, 11200
+Flavio, TI, Engenheiro de Software, Tecnologia da Informacao, 9200

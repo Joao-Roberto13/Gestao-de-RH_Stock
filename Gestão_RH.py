@@ -7,10 +7,16 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from fpdf import FPDF
 
-#Armazem.....
-# Ficheiro para salvar os dados
+# Inicializando o estoque único e o preço total
+estoque = deque()
+preco_total = 0
+vendas_diarias = {}
+compras_diarias = {}
+quantidades_diarias = {}
+salario = 0
 ficheiro = "funcionarios.txt"
 
+#Armazem.....
 def filtro(text, table_widget):
     text = re.sub(r'[\W_]+', "", text).lower()
     for row in range(table_widget.rowCount()):
@@ -27,23 +33,25 @@ def carregar_dadosRH():
     if os.path.exists(ficheiro):
         with open(ficheiro, "r") as file:
             for line in file:
-                nome, area_trabalho, cargo, departamento = line.strip().split(",")
+                nome, area_trabalho, cargo, departamento, salario = line.strip().split(",")
                 rowPosition = screen_RH.tableWidget.rowCount()
                 screen_RH.tableWidget.insertRow(rowPosition)
                 screen_RH.tableWidget.setItem(rowPosition, 0, QtWidgets.QTableWidgetItem(nome))
                 screen_RH.tableWidget.setItem(rowPosition, 1, QtWidgets.QTableWidgetItem(area_trabalho))
                 screen_RH.tableWidget.setItem(rowPosition, 2, QtWidgets.QTableWidgetItem(cargo))
                 screen_RH.tableWidget.setItem(rowPosition, 3, QtWidgets.QTableWidgetItem(departamento))
+                screen_RH.tableWidget.setItem(rowPosition, 4, QtWidgets.QTableWidgetItem(salario))
 
-def salvar_dados():
+def salvar_dadosRH():
     """Salva os dados da tableWidget no ficheiro de texto."""
-    with open(screen_RH.ficheiro, "w") as file:
+    with open(ficheiro, "w") as file:
         for row in range(screen_RH.tableWidget.rowCount()):
             nome = screen_RH.tableWidget.item(row, 0).text()
             area_trabalho = screen_RH.tableWidget.item(row, 1).text()
             cargo = screen_RH.tableWidget.item(row, 2).text()
             departamento = screen_RH.tableWidget.item(row, 3).text()
-            file.write(f"{nome},{area_trabalho},{cargo},{departamento}\n")
+            salario = departamento = screen_RH.tableWidget.item(row, 4).text()
+            file.write(f"{nome},{area_trabalho},{cargo},{departamento},{salario}\n")
 
 def registrar_funcionario():
     """Adiciona um novo funcionário na tabela e no ficheiro."""
@@ -51,6 +59,7 @@ def registrar_funcionario():
     area_trabalho = screen_RH.lineEdit_5.text()
     cargo = screen_RH.lineEdit.text()
     departamento = screen_RH.lineEdit_3.text()
+    salario = screen_RH.lineEdit_6.text()
 
     if nome and area_trabalho and cargo and departamento:
         rowPosition = screen_RH.tableWidget.rowCount()
@@ -60,15 +69,17 @@ def registrar_funcionario():
         screen_RH.tableWidget.setItem(rowPosition, 1, QtWidgets.QTableWidgetItem(area_trabalho))
         screen_RH.tableWidget.setItem(rowPosition, 2, QtWidgets.QTableWidgetItem(cargo))
         screen_RH.tableWidget.setItem(rowPosition, 3, QtWidgets.QTableWidgetItem(departamento))
+        screen_RH.tableWidget.setItem(rowPosition, 3, QtWidgets.QTableWidgetItem(salario))
 
         # Limpar campos de texto
         screen_RH.lineEdit_2.clear()
         screen_RH.lineEdit_5.clear()
         screen_RH.lineEdit.clear()
         screen_RH.lineEdit_3.clear()
+        screen_RH.lineEdit_6.clear()
 
         # Salvar os dados no ficheiro
-        screen_RH.salvar_dados()
+        salvar_dadosRH()
 
 def alterar_funcionario():
     """Altera os dados do funcionário selecionado na tabela e atualiza o ficheiro."""
@@ -79,15 +90,17 @@ def alterar_funcionario():
         screen_RH.tableWidget.setItem(selected_row, 1, QtWidgets.QTableWidgetItem(screen_RH.lineEdit_5.text()))
         screen_RH.tableWidget.setItem(selected_row, 2, QtWidgets.QTableWidgetItem(screen_RH.lineEdit.text()))
         screen_RH.tableWidget.setItem(selected_row, 3, QtWidgets.QTableWidgetItem(screen_RH.lineEdit_3.text()))
+        screen_RH.tableWidget.setItem(selected_row, 3, QtWidgets.QTableWidgetItem(screen_RH.lineEdit_4.text()))
 
         # Limpar campos de texto
         screen_RH.lineEdit_2.clear()
         screen_RH.lineEdit_5.clear()
         screen_RH.lineEdit.clear()
         screen_RH.lineEdit_3.clear()
+        screen_RH.lineEdit_6.clear()
 
         # Atualizar o ficheiro com as alterações
-        screen_RH.salvar_dados()
+        salvar_dadosRH()
 
 def excluir_funcionario():
     """Remove o funcionário selecionado na tabela e atualiza o ficheiro."""
@@ -96,16 +109,61 @@ def excluir_funcionario():
     if selected_row >= 0:  # Verifica se uma linha foi selecionada
         screen_RH.tableWidget.removeRow(selected_row)
         # Atualizar o ficheiro com as alterações
-        screen_RH.salvar_dados()
+        salvar_dadosRH()
+
+def gerar_relatorio_RH():
+    """Gera um relatório em PDF com análise de salários, quantidade de trabalhadores e faixas salariais."""
+    salarios = []
+
+    # Coletar todos os salários da tabela
+    for row in range(screen_RH.tableWidget.rowCount()):
+        salario_item = screen_RH.tableWidget.item(row, 4)  # Assume que a coluna do salário é a 5ª
+        if salario_item is not None:
+            salarios.append(float(salario_item.text()))
+
+    if not salarios:  # Verifica se não há salários registrados
+        QMessageBox.information(screen_RH, "Relatório RH", "Não há funcionários cadastrados.")
+        return
+
+    quantidade_trabalhadores = len(salarios)
+    salario_medio = sum(salarios) / quantidade_trabalhadores
+    salario_minimo = min(salarios)
+    salario_maximo = max(salarios)
+
+    # Análise de Faixas Salariais
+    faixa_baixa = len([salario for salario in salarios if salario < 20000])
+    faixa_media = len([salario for salario in salarios if 20000 <= salario < 40000])
+    faixa_alta = len([salario for salario in salarios if salario >= 40000])
+
+    # Criar o PDF
+    pdf = FPDF()
+    pdf.add_page()
+    
+    # Adicionar título
+    pdf.set_font("Arial", 'B', 16)
+    pdf.cell(0, 10, 'Relatório de Recursos Humanos', 0, 1, 'C')
+
+    # Adicionar conteúdo
+    pdf.set_font("Arial", size=12)
+    pdf.cell(0, 10, f"Quantidade de Trabalhadores: {quantidade_trabalhadores}", 0, 1)
+    pdf.cell(0, 10, f"Salário Médio: {salario_medio:.2f} MT", 0, 1)
+    pdf.cell(0, 10, f"Salário Mínimo: {salario_minimo:.2f} MT", 0, 1)
+    pdf.cell(0, 10, f"Salário Máximo: {salario_maximo:.2f} MT", 0, 1)
+    
+    # Análise de Faixas Salariais
+    pdf.cell(0, 10, 'Distribuição por Faixa Salarial:', 0, 1)
+    pdf.cell(0, 10, f"Trabalhadores com salário abaixo de 20.000 MT: {faixa_baixa}", 0, 1)
+    pdf.cell(0, 10, f"Trabalhadores com salário entre 20.000 e 40.000 MT: {faixa_media}", 0, 1)
+    pdf.cell(0, 10, f"Trabalhadores com salário acima de 40.000 MT: {faixa_alta}", 0, 1)
+
+    # Salvar o PDF
+    pdf_output_path = "Relatório de RH.pdf"
+    pdf.output(pdf_output_path)
+
+    # Mensagem de confirmação
+    QMessageBox.information(screen_RH, "Relatório RH", f"Relatório gerado com sucesso: {pdf_output_path}")
 
 #Recurso Humanos...
-# Inicializando o estoque único e o preço total
-estoque = deque()
-preco_total = 0
-vendas_diarias = {}
-compras_diarias = {}
-quantidades_diarias = {}
-
 # Função para carregar dados do arquivo de texto
 def carregar_dadosArmazem():
     global preco_total, estoque, vendas_diarias, compras_diarias, quantidades_diarias
@@ -124,7 +182,7 @@ def carregar_dadosArmazem():
         QMessageBox.warning(screen, "Erro ao carregar dados", str(e))
 
 # Função para salvar dados no arquivo de texto
-def salvar_dados():
+def salvar_dadosArm():
     with open("dados_estoque.txt", "w") as file:
         
         # Itera sobre os itens no estoque e grava no arquivo
@@ -212,7 +270,7 @@ def adicionar_produto():
     # Limpar os campos após adicionar
     limpar_campos()
     # Salvar dados no arquivo ao adicionar um novo produto
-    salvar_dados()
+    salvar_dadosArm()
 
 # Função para vender produtos (FIFO)
 def vender_fifo(quantidade):
@@ -300,7 +358,7 @@ def remover_produto():
 
     # Limpar os campos após remover
     screen.spinBox.setValue(1)
-    salvar_dados()
+    salvar_dadosArm()
 
 # Função para limpar os campos de entrada
 def limpar_campos():
@@ -309,22 +367,41 @@ def limpar_campos():
 
 # Função para exportar o relatório
 def exportar_relatorio():
+    """Gera um relatório em PDF com os valores totais, média por dia, quantidade atual e valor atual do estoque."""
+    
+    # Calcular os valores totais
+    total_quantidade = sum(qtd for _, qtd, _ in estoque)
+    total_valor = sum(qtd * preco for _, qtd, preco in estoque)
+    
+    # Calcular a média de valor por dia
+    media_por_dia = total_valor / len(compras_diarias) if compras_diarias else 0
+    
+    # Criar o PDF
     pdf = FPDF()
     pdf.add_page()
+    
+    # Adicionar título
+    pdf.set_font("Arial", 'B', 16)
+    pdf.cell(0, 10, 'Relatório de Estoque', 0, 1, 'C')
+    
+    # Adicionar conteúdo
     pdf.set_font("Arial", size=12)
+    pdf.cell(0, 10, f"Quantidade Total: {total_quantidade} itens", 0, 1)
+    pdf.cell(0, 10, f"Valor Total: {total_valor:.2f} MT", 0, 1)
+    pdf.cell(0, 10, f"Média de Valor por Dia: {media_por_dia:.2f} MT", 0, 1)
+    
+    # Adicionar detalhes das compras diárias
+    pdf.cell(0, 10, 'Compras Diárias:', 0, 1)
+    for data, valor in compras_diarias.items():
+        pdf.cell(0, 10, f"{data}: {valor:.2f} MT", 0, 1)
+    
+    # Salvar o PDF
+    pdf_output_path = "Relatório_de_Estoque.pdf"
+    pdf.output(pdf_output_path)
+    
+    # Mensagem de confirmação
+    QMessageBox.information(screen, "Relatório", f"Relatório exportado com sucesso: {pdf_output_path}")
 
-    pdf.cell(200, 10, txt="Relatório de Estoque", ln=True, align='C')
-
-    # Total e médias diárias
-    total_vendas = sum(vendas_diarias.values())
-    media_diarias = total_vendas / len(vendas_diarias) if vendas_diarias else 0
-
-    pdf.cell(200, 10, f"Total Vendas: {total_vendas:.2f} MT", ln=True)
-    pdf.cell(200, 10, f"Média Diária: {media_diarias:.2f} MT", ln=True)
-
-    pdf.output("relatorio_estoque.pdf")
-
-    QMessageBox.warning(screen, "Concluido", "Relátorio Exportado com Sucesso!")
 
 def exibir_graficos():
     # Configurar a figura e o canvas
@@ -373,10 +450,12 @@ def abrirArmazem():
 def voltarMainRH():
     main.show()
     screen_RH.close()
+    salvar_dadosRH
 
 def voltarMainArm():
     main.show()
     screen.close()
+    salvar_dadosArm()
 
 app = QtWidgets.QApplication([])
 # Carrega a interface do arquivo .ui
@@ -390,6 +469,7 @@ screen_RH.pushButton_2.clicked.connect(alterar_funcionario)  # Botão Alterar
 screen_RH.pushButton_3.clicked.connect(excluir_funcionario)  # Botão Excluir        
 screen_RH.lineEdit_4.textChanged.connect(lambda: filtro(screen_RH.lineEdit_4.text(), screen_RH.tableWidget))
 screen_RH.actionSair.triggered.connect(voltarMainRH)
+screen_RH.actionRelatorio.triggered.connect(gerar_relatorio_RH)
 
 # Conectar botões às funções
 screen.pushButton.clicked.connect(adicionar_produto)
